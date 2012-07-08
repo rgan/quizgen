@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        function load_slide(slide_id, div_id) {
+            $.ajax({url: "/slides/" + slide_id,
+                    success: function(data, status) {
+                        $("#"+div_id).html(data)
+                    },
+                    error: function(request, status, error) {
+                        alert(request.responseText);
+                    }
+            });
+        }
+    </script>
+</head>
+<body onload="load_slide('slide1', 'slide')">
+
+<h1>Course Title</h1>
+
+<div id="slide"></div>
+
+</body>
+</html>

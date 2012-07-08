@@ -1,0 +1,4 @@
+cheetah==2.4.4
+Fabric==1.4.2
+nose
+tornado==2.3
